@@ -1,0 +1,50 @@
+<div>
+    <div class="box">
+        <!-- vuex 相关知识 -->
+        <template v-if="false">
+            <p>
+                count: {{$store.state.count}}
+            </p>
+            <p>
+                doubleCount: {{$store.getters.countPlus}}
+            </p>
+            <button @click="changeCount(5)">click+5</button>
+            <button @click="changeNum(10)">click+10</button>
+        </template>
+
+        <!-- 查询车标 https://www.juhe.cn/box/index/id/538 -->
+        <template v-if="false">
+            <div>
+                <select v-model="selected">
+                    <option v-for="option in carOptions" :value="option.value">
+                        {{ option.text }}
+                    </option>
+                </select>
+            </div>
+            <ul class="car-list">
+                <li v-for="(carItem, index) in carList" :key="index" class="car-item">
+                    <img :src="carItem.brand_logo">
+                    {{carItem.brand_name}}
+                </li>
+            </ul>
+        </template>
+
+        <!-- 生成二维码 https://www.juhe.cn/box/index/id/296 -->
+        <template v-if="false">
+            <div>
+                <input type="text" placeholder="输入文字内容" v-model="qrCodeText">
+                <button @click="getQrCode">获取二维码</button>
+                <img v-if="qrCodeImg" :src="'data:image/jpeg;base64,'+qrCodeImg">
+            </div>
+        </template>
+
+        <!-- 今日头条 https://www.juhe.cn/box/index/id/235 -->
+        <template v-if="false">
+            <ul>
+                <li v-for="(newsItem, index) in topNews" :key="index" @click="toNewsDetail(newsItem.url)">
+                    {{index + 1 + '  ' + newsItem.title}}
+                </li>
+            </ul>
+        </template>
+    </div>
+</div>

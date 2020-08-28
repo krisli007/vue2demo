@@ -1,0 +1,19 @@
+<div class="w750">
+    <div class="virtual-box">
+        <div class="tab-box">
+            <div 
+                v-for="(tabItem, index) in tab" 
+                :key="index"
+                class="tab"
+                @click="switchTab(index, tabItem.path)">
+                    <p :class="{on: index === currentTabIndex}">
+                        {{tabItem.text}}
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <keep-alive>
+        <router-view/>
+    </keep-alive>
+</div>

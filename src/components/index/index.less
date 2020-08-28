@@ -1,0 +1,22 @@
+@import "../../style/global.less";
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px/@p auto;
+    width: 700px/@p;
+    height: 1000px/@p;
+    overflow: scroll;
+    .car-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px/@p;
+        box-sizing: border-box;
+        width: 33.3%;
+        img {
+            width: 128px/@p;
+        }
+    }
+}

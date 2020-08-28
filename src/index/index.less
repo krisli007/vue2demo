@@ -1,0 +1,42 @@
+@import "../style/global.less";
+
+.w750 {
+    margin: 0 auto;
+    max-width: 750px/@p;
+    height: 100vh;
+    background-color: rgb(243, 243, 243);
+}
+.virtual-box {
+    height: 88px/@p;
+}
+.tab-box {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 750px/@p;
+    border-bottom: 1px solid #dedede;
+    .tab {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 88px/@p;
+        font-size: 32px/@p;
+        color: #ABADB2;
+        -webkit-tap-highlight-color:transparent;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px/@p;
+            height: 92px/@p;
+            &.on {
+                font-weight: 600;
+                color: #050C1C;
+                border-bottom: 4px/@p solid #407AFF;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
